@@ -107,6 +107,7 @@ exports.initSchema = function (field, schema, Model) {
 exports.viewOptions = function (field, Model) {
   let options = alaska.Field.viewOptions.apply(this, arguments);
   options.multi = field.multi;
+  options.allowed = field.allowed;
   options.cell = 'ImageFieldCell';
   options.view = 'ImageFieldView';
   return options;
