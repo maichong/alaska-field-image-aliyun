@@ -198,3 +198,5 @@ AliyunImageField.upload = function (file, field) {
     }
   });
 };
+
+module.exports = AliyunImageField;
