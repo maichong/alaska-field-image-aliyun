@@ -89,7 +89,10 @@ class AliyunImageField extends alaska.Field {
 
     this.underscoreMethod('data', function () {
       let value = this.get(field.path);
-      return value && value.url ? value.url : '';
+      if (!field.multi) {
+        return value && value.url ? value.url : '';
+      }
+      return (value || []).map(v => v && v.url ? v.url : '').filter(v => v);
     });
 
 
