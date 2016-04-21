@@ -1,6 +1,6 @@
 {
   "name": "alaska-field-image-aliyun",
-  "version": "0.6.1",
+  "version": "0.8.0",
   "description": "Alaska aliyun image field",
   "main": "index.js",
   "scripts": {},
@@ -22,7 +22,7 @@
     "alaska": "*"
   },
   "dependencies": {
-    "alaska-field-image": "^0.6.1",
+    "alaska-field-image": "^0.8.0",
     "aliyun-sdk": "^1.8.5",
     "mime": "^1.3.4",
     "moment": "^2.12.0"
