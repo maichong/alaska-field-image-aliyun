@@ -95,7 +95,6 @@ class AliyunImageField extends alaska.Field {
       return (value || []).map(v => v && v.url ? v.url : '').filter(v => v);
     });
 
-
     if (!field.cell) {
       field.cell = 'ImageFieldCell';
     }
@@ -103,7 +102,6 @@ class AliyunImageField extends alaska.Field {
       field.view = 'ImageFieldView';
     }
   }
-
 }
 
 AliyunImageField.plain = mongoose.Schema.Types.Mixed;
