@@ -6,7 +6,7 @@ Alaska aliyun image field
 
 export default {
 
-  'alaska-field-image': {
+  'alaska-field-image-aliyun': {
     allowed: ['png','jpg','bmp'],
     multi: false,
     //empty or ends with /
