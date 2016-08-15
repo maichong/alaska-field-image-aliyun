@@ -120,7 +120,7 @@ AliyunImageField.upload = function (file, field) {
       return reject(new Error('File not found'));
     }
     let name = file.filename || '';
-    let ext = file.ext;
+    let ext = (file.ext || '').toLowerCase();
     let mimeType = file.mime || file.mimeType;
     let filePath;
 
@@ -185,6 +185,12 @@ AliyunImageField.upload = function (file, field) {
       return reject(new Error('Unknown image file'));
     }
 
+    if (!ext && name) {
+      ext = path.extname(name);
+      if (ext) {
+        ext = ext.substr(1).toLowerCase();
+      }
+    }
     if (!ext) {
       ext = mime.extension(mimeType).replace('jpeg', 'jpg');
     }
