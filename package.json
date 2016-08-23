@@ -1,6 +1,6 @@
 {
   "name": "alaska-field-image-aliyun",
-  "version": "0.10.2",
+  "version": "0.10.3",
   "description": "Alaska aliyun image field",
   "keywords": [
     "alaska",
@@ -27,7 +27,7 @@
     "alaska": "*"
   },
   "dependencies": {
-    "alaska-field-image": "^0.10.1",
+    "alaska-field-image": "^0.10.2",
     "aliyun-sdk": "^1.9.4",
     "mime": "^1.3.4",
     "moment": "^2.14.1"

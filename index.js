@@ -72,7 +72,7 @@ class AliyunImageField extends alaska.Field {
     }
 
     if (!field.thumbSuffix && field.thumbSuffix !== false) {
-      field.thumbSuffix = '@2o_200w_1l_90Q.jpg';
+      field.thumbSuffix = '@2o_200w_1l_90Q.EXT';
     }
 
     if (!field.allowed) {
@@ -147,7 +147,7 @@ AliyunImageField.upload = function (file, field) {
       url += img.path;
       img.thumbUrl = img.url = url;
       if (field.thumbSuffix) {
-        img.thumbUrl += field.thumbSuffix;
+        img.thumbUrl += (field.thumbSuffix || '').replace('EXT', img.ext);
       }
 
       field.oss.putObject({
